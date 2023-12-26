@@ -8,7 +8,6 @@ type CMSLinkType = {
   type?: 'custom' | 'reference'
   url?: string
   newTab?: boolean
-  handleClick?: () => void
   reference?: {
     value: string | Page
     relationTo: 'pages'
@@ -30,7 +29,6 @@ export const CMSLink: React.FC<CMSLinkType> = ({
   children,
   className,
   invert,
-  handleClick,
 }) => {
   const href =
     type === 'reference' && typeof reference?.value === 'object' && reference.value.slug
@@ -46,7 +44,7 @@ export const CMSLink: React.FC<CMSLinkType> = ({
 
     if (href || url) {
       return (
-        <Link onClick={handleClick} {...newTabProps} href={href || url} className={className}>
+        <Link {...newTabProps} href={href || url} className={className}>
           {label && label}
           {children && children}
         </Link>

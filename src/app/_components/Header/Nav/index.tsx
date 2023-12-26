@@ -79,7 +79,6 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
                 key={i}
                 {...link}
                 appearance="none"
-                handleClick={() => setMobileMenuOpen(false)}
               />
             )
           })}
