@@ -14,7 +14,69 @@
   }
 }
 
+.mobileNavBar {
+  position: absolute;
+  display: none;
+  top: 7rem;
+  opacity: 1;
+  border-radius: 10px;
+  transition: opacity .1s linear;
+  visibility: visible;
+  white-space: nowrap;
+  z-index: 100;
+  background-color: var(--color-white-500);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+
+
+  @include small-break {
+    display: block;
+    }
+}
+
+.mobileNavList{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+}
+
+.mobilemenu{
+  position: absolute;
+  display: none;
+  right: 1rem;
+  top: 2.8rem;
+
+
+  @include small-break {
+    display: block;
+    }
+} 
+
+.cartIcon{
+  position: absolute;
+  display: none;
+  right: 4rem;
+  top: 2.8rem;
+
+
+  @include small-break {
+    display: block;
+    }
+}
+
 .hide {
   opacity: 0;
   visibility: hidden;
+}
+
+.mobileHide{
+  visibility: visible;
+
+  @include small-break { 
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: -40px;
+  }
 }

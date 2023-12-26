@@ -1,0 +1,25 @@
+@import '../../_css/common';
+
+
+.newCollection{
+    margin-bottom: -90px;
+
+    @include small-break {
+      margin-bottom: var(--base);
+    }
+
+    }
+    
+    .title {
+      align-items: center;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: -100px;
+
+      @include small-break {
+        margin-bottom: -60px;
+
+      }
+
+    }
+
